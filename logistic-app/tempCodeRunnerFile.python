@@ -1,0 +1,17 @@
+import cmath
+
+# Define the given complex numbers
+z1 = 2.3090 - 7.8330j
+z2 = -0.8262 - 2.0907j
+z3 = 1.1910 - 2.2124j
+z4 = 7.6803 - 5.6175j
+
+# Compute e^(j * angle * pi)
+term2 = cmath.exp(0.2j * cmath.pi) * z2
+term3 = cmath.exp(0.4j * cmath.pi) * z3
+term4 = cmath.exp(0.6j * cmath.pi) * z4
+
+# Sum all terms
+result = z1 + term2 + term3 + term4
+
+print(result)
