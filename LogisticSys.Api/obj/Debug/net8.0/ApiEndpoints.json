@@ -32,6 +32,132 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LogisticSys.Api.Controllers.CitiesController",
+    "Method": "GetAllCities",
+    "RelativePath": "api/Cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.CitiesController",
+    "Method": "CreateCity",
+    "RelativePath": "api/Cities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "city",
+        "Type": "LogisticSys.Api.Entities.City",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.CitiesController",
+    "Method": "GetCityById",
+    "RelativePath": "api/Cities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.CitiesController",
+    "Method": "UpdateCity",
+    "RelativePath": "api/Cities/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cityToUpdate",
+        "Type": "LogisticSys.Api.Entities.City",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.CitiesController",
+    "Method": "DeleteCity",
+    "RelativePath": "api/Cities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.DriversController",
+    "Method": "GetAllDrivers",
+    "RelativePath": "api/Drivers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.DriversController",
+    "Method": "CreateDriver",
+    "RelativePath": "api/Drivers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "LogisticSys.Api.Dtos.CreateDriverDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.DriversController",
+    "Method": "UpdateDriver",
+    "RelativePath": "api/Drivers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "LogisticSys.Api.Dtos.UpdateDriverDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LogisticSys.Api.Controllers.DriversController",
     "Method": "GetAvailableDrivers",
     "RelativePath": "api/Drivers/available",

@@ -5,17 +5,17 @@ self.__BUILD_MANIFEST = {
   "/admin": [
     "static/chunks/pages/admin.js"
   ],
+  "/admin/cities": [
+    "static/chunks/pages/admin/cities.js"
+  ],
+  "/admin/drivers": [
+    "static/chunks/pages/admin/drivers.js"
+  ],
+  "/admin/vehicles": [
+    "static/chunks/pages/admin/vehicles.js"
+  ],
   "/auth/login": [
     "static/chunks/pages/auth/login.js"
-  ],
-  "/customer": [
-    "static/chunks/pages/customer.js"
-  ],
-  "/customer/shipments/[id]": [
-    "static/chunks/pages/customer/shipments/[id].js"
-  ],
-  "/driver": [
-    "static/chunks/pages/driver.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -27,8 +27,11 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/admin",
+    "/admin/cities",
+    "/admin/drivers",
     "/admin/shipments",
     "/admin/users",
+    "/admin/vehicles",
     "/auth/login",
     "/auth/register",
     "/customer",

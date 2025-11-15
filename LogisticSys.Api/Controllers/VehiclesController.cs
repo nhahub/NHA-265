@@ -23,11 +23,13 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> GetAllVehicles()
         {
             var vehicles = await _context.Vehicles
-                .Select(v => new AvailableVehicleDto
+                .Select(v => new VehicleDto
                 {
                     VehicleId = v.VehicleId,
                     PlateNumber = v.PlateNumber,
-                    Type = v.Type ?? "Other"
+                    Type = v.Type ?? "Other",
+                    Capacity = v.Capacity,
+                    Status = v.Status
                 })
                 .ToListAsync();
 
@@ -64,7 +66,6 @@ namespace LogisticSys.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateVehicle([FromBody] Vehicle vehicle)
         {
-
             var exists = await _context.Vehicles.AnyAsync(v => v.PlateNumber == vehicle.PlateNumber);
             if (exists)
             {
@@ -133,10 +134,6 @@ namespace LogisticSys.Api.Controllers
             {
                 return NotFound();
             }
-
-            // (اختياري: ممكن نمنع الحذف لو المركبة دي "مربوطة" بشحنة حالية)
-            // var inUse = await _context.Shipments.AnyAsync(s => s.VehicleId == id && s.Status == "In Transit");
-            // if (inUse) { return BadRequest("Cannot delete vehicle while in use."); }
 
             _context.Vehicles.Remove(vehicle);
             await _context.SaveChangesAsync();

@@ -1,21 +1,85 @@
-[00:00:07.975] Server  LOG      ✓ Ready in 5s
-[00:00:36.095] Server  LOG      ○ Compiling / ...
-[00:00:40.440] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:00:06.033] Server  LOG      ✓ Ready in 3.5s
+[00:00:09.101] Server  LOG      ○ Compiling /admin/drivers ...
+[00:00:33.914] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:00:48.740] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 0
-[00:05:37.579] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:00:33.914] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:12:35.294] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:00:33.914] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:21:13.058] Server  LOG      ✓ Compiled in 111ms
-[00:22:18.266] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:02:32.699] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./pages/admin/drivers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:32.711] Server  LOG      ✓ Compiled in 747ms
+[00:03:02.558] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./pages/admin/drivers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:02.582] Server  LOG      ✓ Compiled in 145ms
+[00:04:06.339] Server  LOG      ✓ Compiled in 368ms
+[00:04:17.533] Server  LOG      ✓ Compiled in 139ms
+[00:04:22.818] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:22:18.266] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:04:22.818] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:33:08.444] Server  LOG      ✓ Compiled in 575ms
-[00:33:51.514] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:04:22.818] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:33:58.248] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:13:09.647] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:33:58.248] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:13:09.648] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:13:09.648] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:20:11.929] Server  LOG      ✓ Compiled in 378ms
+[00:20:45.656] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:20:45.656] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:24.924] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:21:24.924] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:21:24.924] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:21:24.924] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:24.924] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:28.081] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:29.870] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
+[00:21:29.870] Browser ERROR   MUI: A component is changing the uncontrolled value state of Select to be controlled.
+Elements should not switch from uncontrolled to controlled (or vice versa).
+Decide between using a controlled or uncontrolled Select element for the lifetime of the component.
+The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.
+More info: https://fb.me/react-controlled-components
+[00:21:32.734] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:32.734] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:33.987] Browser WARN    MUI: You have provided an out-of-range value `undefined` for the select (name="status") component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `Available`, `In Use`, `Maintenance`.
+[00:21:35.521] Browser ERROR   MUI: A component is changing the uncontrolled value state of Select to be controlled.
+Elements should not switch from uncontrolled to controlled (or vice versa).
+Decide between using a controlled or uncontrolled Select element for the lifetime of the component.
+The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.
+More info: https://fb.me/react-controlled-components
+[00:21:37.603] Browser ERROR   MUI: A component is changing the uncontrolled value state of Select to be controlled.
+Elements should not switch from uncontrolled to controlled (or vice versa).
+Decide between using a controlled or uncontrolled Select element for the lifetime of the component.
+The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.
+More info: https://fb.me/react-controlled-components
+[00:26:24.147] Server  LOG      ○ Compiling / ...
+[00:26:30.796] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:26:59.733] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:26:59.733] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:41:10.014] Server  LOG      ✓ Compiled in 141ms
+[00:41:23.833] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:42:07.034] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 

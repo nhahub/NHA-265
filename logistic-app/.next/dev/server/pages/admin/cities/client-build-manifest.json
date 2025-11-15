@@ -1,0 +1,5 @@
+{
+  "/admin/cities": [
+    "static/chunks/pages/admin/cities.js"
+  ]
+}

@@ -21,7 +21,20 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                 Admin Dashboard
             </Link>
           </Typography>
+
+          <Link href="/admin/cities" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>Manage Cities</Button>
+          </Link>
+
+          <Link href="/admin/vehicles" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>Manage Vehicles</Button>
+          </Link>
+
+          <Link href="/admin/drivers" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>Manage Drivers</Button>
+          </Link>
           
+
           <Button color="inherit" onClick={handleLogout}>
             Logout
           </Button>
