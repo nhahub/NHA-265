@@ -1,0 +1,5 @@
+{
+  "/admin/manage-shipments": [
+    "static/chunks/pages/admin/manage-shipments.js"
+  ]
+}

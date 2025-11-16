@@ -5,8 +5,17 @@ self.__BUILD_MANIFEST = {
   "/admin": [
     "static/chunks/pages/admin.js"
   ],
-  "/admin/profile": [
-    "static/chunks/pages/admin/profile.js"
+  "/admin/cities": [
+    "static/chunks/pages/admin/cities.js"
+  ],
+  "/admin/drivers": [
+    "static/chunks/pages/admin/drivers.js"
+  ],
+  "/admin/manage-shipments": [
+    "static/chunks/pages/admin/manage-shipments.js"
+  ],
+  "/admin/vehicles": [
+    "static/chunks/pages/admin/vehicles.js"
   ],
   "/auth/login": [
     "static/chunks/pages/auth/login.js"
@@ -14,20 +23,11 @@ self.__BUILD_MANIFEST = {
   "/customer": [
     "static/chunks/pages/customer.js"
   ],
-  "/customer/new-shipment": [
-    "static/chunks/pages/customer/new-shipment.js"
-  ],
-  "/customer/profile": [
-    "static/chunks/pages/customer/profile.js"
-  ],
   "/customer/shipments/[id]": [
     "static/chunks/pages/customer/shipments/[id].js"
   ],
   "/driver": [
     "static/chunks/pages/driver.js"
-  ],
-  "/driver/profile": [
-    "static/chunks/pages/driver/profile.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -41,6 +41,7 @@ self.__BUILD_MANIFEST = {
     "/admin",
     "/admin/cities",
     "/admin/drivers",
+    "/admin/manage-shipments",
     "/admin/profile",
     "/admin/shipments",
     "/admin/users",

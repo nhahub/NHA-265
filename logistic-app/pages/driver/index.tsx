@@ -16,13 +16,20 @@ import {
 import DriverGuard from '../../components/auth/DriverGuard';
 import DriverLayout from '../../components/layout/DriverLayout';
 import { useRouter } from 'next/router';
+import CustomerRatingModal from '../../components/driver/CustomerRatingModal';
 
 interface ShipmentDto {
   shipmentId: number;
+  customerId: number;
   origin: string;
   destination: string;
   status: string;
   scheduledDate: string | null;
+}
+
+interface RatingFormInputs {
+  ratingValue: number | null;
+  comments: string;
 }
 
 const API_URL = 'https://localhost:7106';
@@ -32,6 +39,11 @@ const DriverDashboard: NextPage = () => {
   const [jobs, setJobs] = useState<ShipmentDto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const [isRatingModalOpen, setIsRatingModalOpen] = useState(false);
+  const [ratingLoading, setRatingLoading] = useState(false);
+  const [ratingError, setRatingError] = useState<string | null>(null);
+  const [selectedCustomerId, setSelectedCustomerId] = useState<number | null>(null);
 
   const fetchJobs = async () => {
     setLoading(true);
@@ -68,8 +80,8 @@ const DriverDashboard: NextPage = () => {
     fetchJobs();
   }, [router]);
 
-  const handleUpdateStatus = async (shipmentId: number, newStatus: string) => {
-        
+  const handleUpdateStatus = async (shipment: ShipmentDto, newStatus: string) => {
+    
     try {
       const token = localStorage.getItem('authToken');
       const headers = {
@@ -77,7 +89,7 @@ const DriverDashboard: NextPage = () => {
         'Authorization': `Bearer ${token}`
       };
 
-      const response = await fetch(`${API_URL}/api/shipments/${shipmentId}/status`, {
+      const response = await fetch(`${API_URL}/api/shipments/${shipment.shipmentId}/status`, {
         method: 'PUT',
         headers: headers,
         body: JSON.stringify({ newStatus: newStatus }),
@@ -87,7 +99,10 @@ const DriverDashboard: NextPage = () => {
         throw new Error('Failed to update status.');
       }
 
-      alert('Status updated successfully!');
+      alert('Status updated successfully! Please rate the customer.');
+      
+      setSelectedCustomerId(shipment.customerId);
+      setIsRatingModalOpen(true);
       
       fetchJobs(); 
       
@@ -95,6 +110,44 @@ const DriverDashboard: NextPage = () => {
       alert(`Error: ${err.message}`);
     }
   };
+
+  const handleRatingSubmit = async (data: RatingFormInputs) => {
+    if (!selectedCustomerId) return;
+
+    setRatingLoading(true);
+    setRatingError(null);
+    try {
+      const token = localStorage.getItem('authToken');
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      };
+
+      const response = await fetch(`${API_URL}/api/ratings/customer`, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          customerId: selectedCustomerId,
+          ratingValue: data.ratingValue,
+          comments: data.comments
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to submit rating.');
+      }
+      
+      alert("Customer rated successfully!");
+      setIsRatingModalOpen(false);
+
+    } catch (err: any) {
+      setRatingError(err.message);
+    } finally {
+      setRatingLoading(false);
+    }
+  };
+
 
   if (loading) return <CircularProgress />;
   if (error) return <Alert severity="error">{error}</Alert>;
@@ -110,9 +163,9 @@ const DriverDashboard: NextPage = () => {
           <TableHead>
             <TableRow>
               <TableCell>Shipment ID</TableCell>
+              <TableCell>Customer ID</TableCell>
               <TableCell>Origin</TableCell>
               <TableCell>Destination</TableCell>
-              <TableCell>Scheduled Date</TableCell>
               <TableCell>Action</TableCell>
             </TableRow>
           </TableHead>
@@ -121,16 +174,16 @@ const DriverDashboard: NextPage = () => {
               jobs.map((job) => (
                 <TableRow key={job.shipmentId}>
                   <TableCell>{job.shipmentId}</TableCell>
+                  <TableCell>{job.customerId}</TableCell>
                   <TableCell>{job.origin}</TableCell>
                   <TableCell>{job.destination}</TableCell>
-                  <TableCell>{job.scheduledDate || 'N/A'}</TableCell>
                   
                   <TableCell>
                     <Button 
                       variant="contained" 
                       color="success"
                       size="small"
-                      onClick={() => handleUpdateStatus(job.shipmentId, 'Delivered')}
+                      onClick={() => handleUpdateStatus(job, 'Delivered')}
                     >
                       Mark as Delivered
                     </Button>
@@ -147,6 +200,17 @@ const DriverDashboard: NextPage = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      {selectedCustomerId && (
+        <CustomerRatingModal
+          open={isRatingModalOpen}
+          onClose={() => setIsRatingModalOpen(false)}
+          onSubmit={handleRatingSubmit}
+          customerId={selectedCustomerId}
+          loading={ratingLoading}
+          error={ratingError}
+        />
+      )}
     </>
   );
 };

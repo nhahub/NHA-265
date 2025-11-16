@@ -23,6 +23,10 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             </Link>
           </Typography>
 
+          <Link href="/admin/manage-shipments" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>Manage Shipments</Button>
+          </Link>
+
           <Link href="/admin/cities" passHref>
              <Button color="inherit" sx={{ mr: 1 }}>Manage Cities</Button>
           </Link>

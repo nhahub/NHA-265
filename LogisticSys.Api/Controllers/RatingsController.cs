@@ -87,5 +87,41 @@ namespace LogisticSys.Api.Controllers
                 return StatusCode(500, new { message = "Error submitting rating.", error = ex.Message });
             }
         }
+
+        [HttpPost("customer")]
+        [Authorize(Roles = "Driver")]
+        public async Task<IActionResult> RateCustomer([FromBody] CreateCustomerRatingDto createDto)
+        {
+            var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (!int.TryParse(userIdString, out int driverId))
+            {
+                return Unauthorized();
+            }
+
+            var customerExists = await _context.CustomerProfiles.AnyAsync(c => c.CustomerId == createDto.CustomerId);
+            if (!customerExists)
+            {
+                return NotFound("Customer not found.");
+            }
+
+            var newRating = new RatingCustomer
+            {
+                CustomerId = createDto.CustomerId,
+                RatingValue = createDto.RatingValue,
+                Comments = createDto.Comments,
+                RatingDate = DateTime.UtcNow
+            };
+
+            try
+            {
+                _context.RatingCustomers.Add(newRating);
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Customer rated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error submitting rating.", error = ex.Message });
+            }
+        }
     }
 }

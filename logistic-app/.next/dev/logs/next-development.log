@@ -1,27 +1,49 @@
-[00:00:11.871] Server  LOG      ✓ Ready in 8.4s
-[00:07:41.014] Server  LOG      ○ Compiling / ...
-[00:08:57.445] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:00:16.187] Server  LOG      ✓ Ready in 11.5s
+[00:00:35.085] Server  LOG      ○ Compiling / ...
+[00:00:54.098] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:09:04.662] Browser ERROR   Failed to login: {}
-[00:09:32.499] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:01:37.960] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:09:32.499] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:01:37.960] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:10:22.093] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:07:55.573] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:10:33.170] Server  LOG      ○ Compiling /customer/shipments/[id] ...
-[00:23:05.978] Server  LOG      ✓ Compiled in 900ms
-[00:35:21.942] Server  LOG      ✓ Compiled in 218ms
-[00:35:22.274] Browser ERROR   %o
+[00:12:07.852] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-%s
+[00:19:13.413] Server  LOG      ✓ Compiled in 1018ms
+[00:19:14.164] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-%s
- {} The above error occurred in the <DriverLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[00:35:46.717] Server  LOG      ✓ Compiled in 254ms
-[00:35:50.576] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:19:14.165] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:35:50.576] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:19:14.165] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:35:50.576] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:24:33.506] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:24:39.385] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:24:39.385] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:24:39.385] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:26:01.327] Server  LOG      ✓ Compiled in 968ms
+[00:26:02.157] Browser ERROR   ./pages/admin/index.tsx:154:3
+Ecmascript file had an error
+  152 |     }));
+  153 |   };
+> 154 |   handleAssignmentChange = handleAssignmentChangeInternal;
+      |   ^^^^^^^^^^^^^^^^^^^^^^
+  155 |
+  156 |
+  157 |   // --- (عرض الواجهة) ---
+
+cannot reassign to a variable declared with `const`
+[00:26:36.386] Server  LOG      ✓ Compiled in 204ms
+[00:27:36.629] Server  LOG      ✓ Compiled in 493ms
+[00:30:07.068] Server  LOG      ○ Compiling /customer/shipments/[id] ...
+[00:37:45.092] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:51:26.554] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:59:46.304] Server  LOG      ○ Compiling /driver ...
+[00:59:57.569] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 

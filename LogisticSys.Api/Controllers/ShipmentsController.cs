@@ -20,11 +20,37 @@ namespace LogisticSys.Api.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllShipments()
+        {
+            var shipments = await _context.Shipments
+                .Include(s => s.Customer.User)
+                .Include(s => s.Driver.User)
+                .OrderByDescending(s => s.CreatedAt)
+                .Select(s => new ShipmentAdminDto
+                {
+                    ShipmentId = s.ShipmentId,
+                    CustomerName = s.Customer.User.Name,
+                    DriverName = s.Driver != null ? s.Driver.User.Name : "N/A",
+                    Origin = s.Origin,
+                    Destination = s.Destination,
+                    Status = s.Status,
+                    ScheduledDate = s.ScheduledDate.HasValue ? s.ScheduledDate.Value.ToString("yyyy-MM-dd") : null
+                })
+                .ToListAsync();
+
+            return Ok(shipments);
+        }
+
         [HttpGet("my-shipments")]
         public async Task<IActionResult> GetMyShipments()
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int customerId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int customerId))
+            {
+                return BadRequest(new { message = "Invalid user ID in token." });
+            }
 
             var shipments = await _context.Shipments
                 .Where(s => s.CustomerId == customerId)
@@ -32,6 +58,7 @@ namespace LogisticSys.Api.Controllers
                 .Select(s => new ShipmentDto
                 {
                     ShipmentId = s.ShipmentId,
+                    CustomerId = s.CustomerId,
                     Origin = s.Origin,
                     Destination = s.Destination,
                     Status = s.Status,
@@ -53,6 +80,7 @@ namespace LogisticSys.Api.Controllers
                 .Select(s => new ShipmentDto
                 {
                     ShipmentId = s.ShipmentId,
+                    CustomerId = s.CustomerId,
                     Origin = s.Origin,
                     Destination = s.Destination,
                     Status = s.Status,
@@ -68,7 +96,10 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> GetMyJobs()
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int driverId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int driverId))
+            {
+                return Unauthorized(new { message = "Invalid user ID in token." });
+            }
 
             var shipments = await _context.Shipments
                 .Where(s => s.DriverId == driverId && s.Status == "In Transit")
@@ -76,6 +107,7 @@ namespace LogisticSys.Api.Controllers
                 .Select(s => new ShipmentDto
                 {
                     ShipmentId = s.ShipmentId,
+                    CustomerId = s.CustomerId,
                     Origin = s.Origin,
                     Destination = s.Destination,
                     Status = s.Status,
@@ -90,7 +122,10 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> CreateShipment([FromBody] CreateShipmentDto createDto)
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int customerId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int customerId))
+            {
+                return Unauthorized(new { message = "Invalid user ID in token." });
+            }
 
             var newShipment = new Shipment
             {
@@ -113,6 +148,7 @@ namespace LogisticSys.Api.Controllers
                 var resultDto = new ShipmentDto
                 {
                     ShipmentId = newShipment.ShipmentId,
+                    CustomerId = newShipment.CustomerId,
                     Origin = newShipment.Origin,
                     Destination = newShipment.Destination,
                     Status = newShipment.Status,
@@ -131,7 +167,10 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> GetShipmentById(int id)
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int currentUserId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int currentUserId))
+            {
+                return Unauthorized(new { message = "Invalid user ID in token." });
+            }
             var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
             var query = _context.Shipments
@@ -158,7 +197,10 @@ namespace LogisticSys.Api.Controllers
                 })
                 .FirstOrDefaultAsync();
 
-            if (shipment == null) { /*...*/ }
+            if (shipment == null)
+            {
+                return NotFound(new { message = "Shipment not found or you do not have permission." });
+            }
             return Ok(shipment);
         }
 
@@ -198,14 +240,20 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> UpdateShipmentStatus(int id, [FromBody] UpdateShipmentStatusDto updateDto)
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int driverId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int driverId))
+            {
+                return Unauthorized(new { message = "Invalid user ID in token." });
+            }
 
             var shipment = await _context.Shipments.FirstOrDefaultAsync(s => s.ShipmentId == id);
             if (shipment == null) { return NotFound(new { message = "Shipment not found." }); }
             if (shipment.DriverId != driverId) { return Forbid(); }
 
             var allowedStatuses = new[] { "Delivered", "Cancelled" };
-            if (!allowedStatuses.Contains(updateDto.NewStatus)) { /*...*/ }
+            if (!allowedStatuses.Contains(updateDto.NewStatus))
+            {
+                return BadRequest(new { message = "Invalid status update value." });
+            }
 
             try
             {

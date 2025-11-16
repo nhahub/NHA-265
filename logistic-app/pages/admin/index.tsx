@@ -16,11 +16,20 @@ import {
   FormControl,
   InputLabel,
   Button,
-  Box
+  Box,
+  Grid 
 } from '@mui/material';
 import AdminGuard from '../../components/auth/AdminGuard';
 import AdminLayout from '../../components/layout/AdminLayout';
 import { useRouter } from 'next/router';
+
+interface DashboardStatsDto {
+  pendingShipments: number;
+  inTransitShipments: number;
+  availableDrivers: number;
+  availableVehicles: number;
+  totalRevenue: number;
+}
 
 interface ShipmentDto {
   shipmentId: number;
@@ -44,7 +53,7 @@ interface AvailableVehicleDto {
 
 interface AssignmentState {
   [shipmentId: number]: {
-    driverId: string;
+    driverId: string; 
     vehicleId: string;
   }
 }
@@ -54,12 +63,11 @@ const API_URL = 'https://localhost:7106';
 const AdminDashboard: NextPage = () => {
   const router = useRouter();
   
+  const [stats, setStats] = useState<DashboardStatsDto | null>(null);
   const [pendingShipments, setPendingShipments] = useState<ShipmentDto[]>([]);
   const [availableDrivers, setAvailableDrivers] = useState<AvailableDriverDto[]>([]);
   const [availableVehicles, setAvailableVehicles] = useState<AvailableVehicleDto[]>([]);
-  
   const [assignments, setAssignments] = useState<AssignmentState>({});
-  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -68,37 +76,58 @@ const AdminDashboard: NextPage = () => {
     setError(null);
     try {
       const token = localStorage.getItem('authToken');
-      if (!token) {
-        router.push('/auth/login');
-        return;
-      }
+      if (!token) { router.push('/auth/login'); return; }
       const headers = { 'Authorization': `Bearer ${token}` };
 
-      const [shipmentsRes, driversRes, vehiclesRes] = await Promise.all([
+      const [statsRes, shipmentsRes, driversRes, vehiclesRes] = await Promise.all([
+        fetch(`${API_URL}/api/dashboard/stats`, { headers }), 
         fetch(`${API_URL}/api/shipments/pending`, { headers }),
         fetch(`${API_URL}/api/drivers/available`, { headers }),
         fetch(`${API_URL}/api/vehicles/available`, { headers })
       ]);
 
-      if (!shipmentsRes.ok || !driversRes.ok || !vehiclesRes.ok) {
+      if (!statsRes.ok || !shipmentsRes.ok || !driversRes.ok || !vehiclesRes.ok) {
         throw new Error('Failed to fetch necessary data.');
       }
 
+      setStats(await statsRes.json()); 
       setPendingShipments(await shipmentsRes.json());
       setAvailableDrivers(await driversRes.json());
       setAvailableVehicles(await vehiclesRes.json());
       
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    } catch (err: any) { setError(err.message); } 
+    finally { setLoading(false); }
   };
 
   useEffect(() => {
     fetchData();
   }, [router]);
 
+  const handleAssign = async (shipmentId: number) => {
+    const assignment = assignments[shipmentId];
+    if (!assignment || !assignment.driverId || !assignment.vehicleId) { 
+      alert("Please select both a driver and a vehicle.");
+      return;
+     }
+    try {
+      const token = localStorage.getItem('authToken');
+      const headers = { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
+      const response = await fetch(`${API_URL}/api/shipments/${shipmentId}/assign`, {
+        method: 'PUT',
+        headers: headers,
+        body: JSON.stringify({
+          driverId: Number(assignment.driverId),
+          vehicleId: Number(assignment.vehicleId)
+        })
+      });
+      if (!response.ok) { throw new Error('Failed to assign shipment.'); }
+      alert('Shipment assigned successfully!');
+      fetchData(); 
+    } catch (err: any) {
+      alert(`Error: ${err.message}`);
+    }
+  };
+  
   const handleAssignmentChange = (shipmentId: number, type: 'driver' | 'vehicle', value: string) => {
     setAssignments(prev => ({
       ...prev,
@@ -109,43 +138,6 @@ const AdminDashboard: NextPage = () => {
     }));
   };
 
-  const handleAssign = async (shipmentId: number) => {
-    const assignment = assignments[shipmentId];
-
-    if (!assignment || !assignment.driverId || !assignment.vehicleId) {
-      alert("Please select both a driver and a vehicle.");
-      return;
-    }
-
-    try {
-      const token = localStorage.getItem('authToken');
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      };
-
-      const response = await fetch(`${API_URL}/api/shipments/${shipmentId}/assign`, {
-        method: 'PUT',
-        headers: headers,
-        body: JSON.stringify({
-          driverId: Number(assignment.driverId),
-          vehicleId: Number(assignment.vehicleId)
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to assign shipment.');
-      }
-
-      alert('Shipment assigned successfully!');
-      
-      fetchData(); 
-      
-    } catch (err: any) {
-      alert(`Error: ${err.message}`);
-    }
-  };
-
 
   if (loading) return <CircularProgress />;
   if (error) return <Alert severity="error">{error}</Alert>;
@@ -153,11 +145,55 @@ const AdminDashboard: NextPage = () => {
   return (
     <>
       <Typography variant="h4" gutterBottom>
-        Pending Shipments
+        Admin Dashboard
       </Typography>
-      
+
+      {/* @ts-ignore */}
+      <Grid container spacing={2} sx={{ mb: 3 }}>
+        {/* @ts-ignore */}
+        <Grid item xs={12} sm={4} md={2.4}>
+          <Paper sx={{ p: 2, textAlign: 'center' }}>
+            <Typography variant="h6">Pending</Typography>
+            <Typography variant="h4">{stats?.pendingShipments ?? 0}</Typography>
+          </Paper>
+        </Grid>
+        {/* @ts-ignore */}
+        <Grid item xs={12} sm={4} md={2.4}>
+          <Paper sx={{ p: 2, textAlign: 'center' }}>
+            <Typography variant="h6">In Transit</Typography>
+            <Typography variant="h4">{stats?.inTransitShipments ?? 0}</Typography>
+          </Paper>
+        </Grid>
+        {/* @ts-ignore */}
+        <Grid item xs={12} sm={4} md={2.4}>
+          <Paper sx={{ p: 2, textAlign: 'center' }}>
+            <Typography variant="h6">Available Drivers</Typography>
+            <Typography variant="h4">{stats?.availableDrivers ?? 0}</Typography>
+          </Paper>
+        </Grid>
+
+        {/* @ts-ignore */}
+        <Grid item xs={12} sm={6} md={2.4}>
+          <Paper sx={{ p: 2, textAlign: 'center' }}>
+            <Typography variant="h6">Available Vehicles</Typography>
+            <Typography variant="h4">{stats?.availableVehicles ?? 0}</Typography>
+          </Paper>
+        </Grid>
+
+        {/* @ts-ignore */}
+        <Grid item xs={12} sm={6} md={2.4}>
+          <Paper sx={{ p: 2, textAlign: 'center' }}>
+            <Typography variant="h6">Total Revenue</Typography>
+            <Typography variant="h4">EGP {stats?.totalRevenue ?? 0}</Typography>
+          </Paper>
+        </Grid>
+      </Grid>
+
+      <Typography variant="h5" gutterBottom>
+        Assign Pending Shipments
+      </Typography>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 900 }} aria-label="assign table">
+         <Table sx={{ minWidth: 900 }} aria-label="assign table">
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
@@ -175,7 +211,6 @@ const AdminDashboard: NextPage = () => {
                   <TableCell>{shipment.shipmentId}</TableCell>
                   <TableCell>{shipment.origin}</TableCell>
                   <TableCell>{shipment.destination}</TableCell>
-                  
                   <TableCell>
                     <FormControl fullWidth size="small">
                       <InputLabel>Driver</InputLabel>
@@ -192,7 +227,6 @@ const AdminDashboard: NextPage = () => {
                       </Select>
                     </FormControl>
                   </TableCell>
-
                   <TableCell>
                     <FormControl fullWidth size="small">
                       <InputLabel>Vehicle</InputLabel>
@@ -209,7 +243,6 @@ const AdminDashboard: NextPage = () => {
                       </Select>
                     </FormControl>
                   </TableCell>
-
                   <TableCell>
                     <Button 
                       variant="contained" 
@@ -219,7 +252,6 @@ const AdminDashboard: NextPage = () => {
                       Assign
                     </Button>
                   </TableCell>
-
                 </TableRow>
               ))
             ) : (

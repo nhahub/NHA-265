@@ -3,12 +3,12 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/admin": "pages/admin.js",
-  "/admin/profile": "pages/admin/profile.js",
+  "/admin/cities": "pages/admin/cities.js",
+  "/admin/drivers": "pages/admin/drivers.js",
+  "/admin/manage-shipments": "pages/admin/manage-shipments.js",
+  "/admin/vehicles": "pages/admin/vehicles.js",
   "/auth/login": "pages/auth/login.js",
   "/customer": "pages/customer.js",
-  "/customer/new-shipment": "pages/customer/new-shipment.js",
-  "/customer/profile": "pages/customer/profile.js",
   "/customer/shipments/[id]": "pages/customer/shipments/[id].js",
-  "/driver": "pages/driver.js",
-  "/driver/profile": "pages/driver/profile.js"
+  "/driver": "pages/driver.js"
 }

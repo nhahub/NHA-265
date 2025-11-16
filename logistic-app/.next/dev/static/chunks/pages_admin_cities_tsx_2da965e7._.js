@@ -8,9 +8,9 @@
   "static/chunks/node_modules_next_5cb05f67._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
   "static/chunks/node_modules_@mui_system_esm_328f2c58._.js",
-  "static/chunks/node_modules_@mui_material_esm_197cea40._.js",
-  "static/chunks/node_modules_212e45f0._.js",
-  "static/chunks/[root-of-the-server]__5eddcbf0._.js"
+  "static/chunks/node_modules_@mui_material_esm_5da75da5._.js",
+  "static/chunks/node_modules_fd8769c5._.js",
+  "static/chunks/[root-of-the-server]__37cfa2da._.js"
 ],
     source: "entry"
 });

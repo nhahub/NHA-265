@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "D:\\Project\\LogisticSys.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\createcustomerratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\createcustomerratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\dashboardstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\dashboardstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\shipmentadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\shipmentadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\trackingentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\trackingentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\vehicledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\driverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\createratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\createratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\shipmentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\shipmentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|solutionrelative:dtos\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51F74858-0F92-43C4-B7D4-7643CEEBEC1E}|LogisticSys.Api.csproj|d:\\project\\logisticsys.api\\dtos\\updateshipmentstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -214,20 +230,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateOrUpdatePaymentDto.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateOrUpdatePaymentDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\CreateOrUpdatePaymentDto.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateOrUpdatePaymentDto.cs",
-              "RelativeToolTip": "Dtos\\CreateOrUpdatePaymentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T23:28:38.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
@@ -235,12 +238,127 @@
               "RelativeToolTip": "Controllers\\ProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T22:09:26.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T22:09:26.6Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "VehiclesController.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\VehiclesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehiclesController.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\VehiclesController.cs",
+              "RelativeToolTip": "Controllers\\VehiclesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T20:06:29.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RatingsController.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\RatingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RatingsController.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\RatingsController.cs",
+              "RelativeToolTip": "Controllers\\RatingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:29:55.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShipmentDto.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ShipmentDto.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentDto.cs",
+              "RelativeToolTip": "Dtos\\ShipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T15:01:18.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShipmentsController.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\ShipmentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShipmentsController.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\ShipmentsController.cs",
+              "RelativeToolTip": "Controllers\\ShipmentsController.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAAABMBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T15:13:49.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrackingController.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\TrackingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TrackingController.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\TrackingController.cs",
+              "RelativeToolTip": "Controllers\\TrackingController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAgwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:13:38.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA4wCQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T22:54:15.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateCustomerRatingDto.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateCustomerRatingDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\CreateCustomerRatingDto.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateCustomerRatingDto.cs",
+              "RelativeToolTip": "Dtos\\CreateCustomerRatingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T23:19:29.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShipmentAdminDto.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentAdminDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ShipmentAdminDto.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentAdminDto.cs",
+              "RelativeToolTip": "Dtos\\ShipmentAdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T22:24:54.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DashboardStatsDto.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\DashboardStatsDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DashboardStatsDto.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\DashboardStatsDto.cs",
+              "RelativeToolTip": "Dtos\\DashboardStatsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T22:53:21.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "UpdateProfileDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\UpdateProfileDto.cs",
               "RelativeDocumentMoniker": "Dtos\\UpdateProfileDto.cs",
@@ -252,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "ProfileDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ProfileDto.cs",
               "RelativeDocumentMoniker": "Dtos\\ProfileDto.cs",
@@ -264,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "PaymentsController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\PaymentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaymentsController.cs",
@@ -272,12 +390,23 @@
               "RelativeToolTip": "Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T21:29:08.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T21:29:08.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "CreateOrUpdatePaymentDto.cs",
+              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateOrUpdatePaymentDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\CreateOrUpdatePaymentDto.cs",
+              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateOrUpdatePaymentDto.cs",
+              "RelativeToolTip": "Dtos\\CreateOrUpdatePaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T23:28:38.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ChangePasswordDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ChangePasswordDto.cs",
               "RelativeDocumentMoniker": "Dtos\\ChangePasswordDto.cs",
@@ -289,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "PaymentDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\PaymentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\PaymentDto.cs",
@@ -301,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "CitiesController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\CitiesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CitiesController.cs",
@@ -313,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "CreateDriverDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateDriverDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CreateDriverDto.cs",
@@ -325,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "DriverDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\DriverDto.cs",
               "RelativeDocumentMoniker": "Dtos\\DriverDto.cs",
@@ -337,31 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShipmentsController.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\ShipmentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ShipmentsController.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\ShipmentsController.cs",
-              "RelativeToolTip": "Controllers\\ShipmentsController.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAAAOkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T15:13:49.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TrackingController.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\TrackingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TrackingController.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\TrackingController.cs",
-              "RelativeToolTip": "Controllers\\TrackingController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwFcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T23:13:38.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "TrackingEntryDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\TrackingEntryDto.cs",
               "RelativeDocumentMoniker": "Dtos\\TrackingEntryDto.cs",
@@ -373,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "NotificationDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\NotificationDto.cs",
               "RelativeDocumentMoniker": "Dtos\\NotificationDto.cs",
@@ -385,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationsController.cs",
@@ -397,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "VehicleDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\VehicleDto.cs",
               "RelativeDocumentMoniker": "Dtos\\VehicleDto.cs",
@@ -409,19 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "VehiclesController.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\VehiclesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VehiclesController.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\VehiclesController.cs",
-              "RelativeToolTip": "Controllers\\VehiclesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T20:06:29.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "UpdateDriverDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\UpdateDriverDto.cs",
               "RelativeDocumentMoniker": "Dtos\\UpdateDriverDto.cs",
@@ -433,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "DriversController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\DriversController.cs",
               "RelativeDocumentMoniker": "Controllers\\DriversController.cs",
@@ -445,19 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RatingsController.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\RatingsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RatingsController.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Controllers\\RatingsController.cs",
-              "RelativeToolTip": "Controllers\\RatingsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T23:29:55.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "CreateTrackingDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateTrackingDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CreateTrackingDto.cs",
@@ -469,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "CreateRatingDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateRatingDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CreateRatingDto.cs",
@@ -481,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "AvailableDriverDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\AvailableDriverDto.cs",
               "RelativeDocumentMoniker": "Dtos\\AvailableDriverDto.cs",
@@ -493,19 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ShipmentDto.cs",
-              "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\ShipmentDto.cs",
-              "ToolTip": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentDto.cs",
-              "RelativeToolTip": "Dtos\\ShipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T15:01:18.089Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "ShipmentDetailsDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\ShipmentDetailsDto.cs",
               "RelativeDocumentMoniker": "Dtos\\ShipmentDetailsDto.cs",
@@ -517,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "AvailableVehicleDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\AvailableVehicleDto.cs",
               "RelativeDocumentMoniker": "Dtos\\AvailableVehicleDto.cs",
@@ -529,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "UpdateShipmentStatusDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\UpdateShipmentStatusDto.cs",
               "RelativeDocumentMoniker": "Dtos\\UpdateShipmentStatusDto.cs",
@@ -541,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "AssignShipmentDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\AssignShipmentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\AssignShipmentDto.cs",
@@ -553,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Entities\\User.cs",
@@ -565,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "Vehicle.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Vehicle.cs",
               "RelativeDocumentMoniker": "Entities\\Vehicle.cs",
@@ -577,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -589,7 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -601,7 +670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Shipment.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Shipment.cs",
               "RelativeDocumentMoniker": "Entities\\Shipment.cs",
@@ -613,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -625,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "Tracking.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Tracking.cs",
               "RelativeDocumentMoniker": "Entities\\Tracking.cs",
@@ -637,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "Rating_Shipment.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Rating_Shipment.cs",
               "RelativeDocumentMoniker": "Entities\\Rating_Shipment.cs",
@@ -649,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "Rating_Driver.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Rating_Driver.cs",
               "RelativeDocumentMoniker": "Entities\\Rating_Driver.cs",
@@ -661,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -673,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "Rating_Customer.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Rating_Customer.cs",
               "RelativeDocumentMoniker": "Entities\\Rating_Customer.cs",
@@ -685,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Payment.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Payment.cs",
               "RelativeDocumentMoniker": "Entities\\Payment.cs",
@@ -697,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "Notification.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "Entities\\Notification.cs",
@@ -709,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "DriverProfile.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\DriverProfile.cs",
               "RelativeDocumentMoniker": "Entities\\DriverProfile.cs",
@@ -721,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "CustomerProfile.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\CustomerProfile.cs",
               "RelativeDocumentMoniker": "Entities\\CustomerProfile.cs",
@@ -733,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "City.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\City.cs",
               "RelativeDocumentMoniker": "Entities\\City.cs",
@@ -745,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "AdminProfile.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Entities\\AdminProfile.cs",
               "RelativeDocumentMoniker": "Entities\\AdminProfile.cs",
@@ -757,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "CreateShipmentDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\CreateShipmentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CreateShipmentDto.cs",
@@ -769,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\LoginDto.cs",
               "RelativeDocumentMoniker": "Dtos\\LoginDto.cs",
@@ -781,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\Dtos\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Dtos\\RegisterDto.cs",
@@ -793,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -805,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "LogisticSys.Api.csproj",
               "DocumentMoniker": "D:\\Project\\LogisticSys.Api\\LogisticSys.Api.csproj",
               "RelativeDocumentMoniker": "LogisticSys.Api.csproj",

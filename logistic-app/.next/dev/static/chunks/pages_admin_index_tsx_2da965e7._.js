@@ -7,9 +7,9 @@
   "static/chunks/node_modules_next_dist_7fdbac9b._.js",
   "static/chunks/node_modules_next_5cb05f67._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
-  "static/chunks/node_modules_@mui_system_esm_03866599._.js",
-  "static/chunks/node_modules_@mui_material_esm_9b77e426._.js",
-  "static/chunks/node_modules_f650574b._.js",
+  "static/chunks/node_modules_@mui_system_esm_044c2ae9._.js",
+  "static/chunks/node_modules_@mui_material_esm_65c5d599._.js",
+  "static/chunks/node_modules_76080489._.js",
   "static/chunks/[root-of-the-server]__14a84426._.js"
 ],
     source: "entry"
