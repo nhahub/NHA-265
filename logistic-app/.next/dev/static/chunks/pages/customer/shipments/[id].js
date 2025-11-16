@@ -1,14 +1,15 @@
 __turbopack_load_page_chunks__("/customer/shipments/[id]", [
+  "static/chunks/components_layout_MapComponent_tsx_8f299edb._.js",
   "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
-  "static/chunks/node_modules_next_dist_shared_lib_4025f6b7._.js",
+  "static/chunks/node_modules_next_dist_shared_lib_87f3ca05._.js",
   "static/chunks/node_modules_next_dist_client_3ede7da4._.js",
   "static/chunks/node_modules_next_dist_7fdbac9b._.js",
-  "static/chunks/node_modules_next_5cb05f67._.js",
+  "static/chunks/node_modules_next_32b48aee._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
   "static/chunks/node_modules_@mui_system_esm_5d99b59f._.js",
-  "static/chunks/node_modules_@mui_material_esm_afef3d72._.js",
-  "static/chunks/node_modules_38fcc0ba._.js",
-  "static/chunks/[root-of-the-server]__45b1519d._.js",
+  "static/chunks/node_modules_@mui_material_esm_b8790a9e._.js",
+  "static/chunks/node_modules_59328ffe._.js",
+  "static/chunks/[root-of-the-server]__9204bbfd._.js",
   "static/chunks/pages_customer_shipments_[id]_tsx_2da965e7._.js",
-  "static/chunks/turbopack-pages_customer_shipments_[id]_tsx_40f1627d._.js"
+  "static/chunks/turbopack-pages_customer_shipments_[id]_tsx_a3971c11._.js"
 ])

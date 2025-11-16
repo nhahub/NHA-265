@@ -167,20 +167,20 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> AssignShipment(int id, [FromBody] AssignShipmentDto assignDto)
         {
             var shipment = await _context.Shipments.FirstOrDefaultAsync(s => s.ShipmentId == id);
-
-            if (shipment == null)
-            {
-                return NotFound(new { message = "Shipment not found." });
-            }
-
-            if (shipment.Status != "Pending")
-            {
-                return BadRequest(new { message = "Shipment is not pending and cannot be assigned." });
-            }
+            if (shipment == null) { return NotFound(new { message = "Shipment not found." }); }
+            if (shipment.Status != "Pending") { return BadRequest(new { message = "Shipment is not pending." }); }
 
             shipment.DriverId = assignDto.DriverId;
             shipment.VehicleId = assignDto.VehicleId;
             shipment.Status = "In Transit";
+
+            var notificationForDriver = new Notification
+            {
+                UserId = assignDto.DriverId,
+                Message = $"You have been assigned a new shipment (ID: {shipment.ShipmentId}) from {shipment.Origin}.",
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.Notifications.Add(notificationForDriver);
 
             try
             {
@@ -198,31 +198,30 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> UpdateShipmentStatus(int id, [FromBody] UpdateShipmentStatusDto updateDto)
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int driverId))
-            {
-                return Unauthorized(new { message = "Invalid user ID in token." });
-            }
+            if (!int.TryParse(userIdString, out int driverId)) { /*...*/ }
 
             var shipment = await _context.Shipments.FirstOrDefaultAsync(s => s.ShipmentId == id);
-            if (shipment == null)
-            {
-                return NotFound(new { message = "Shipment not found." });
-            }
-
-            if (shipment.DriverId != driverId)
-            {
-                return Forbid();
-            }
+            if (shipment == null) { return NotFound(new { message = "Shipment not found." }); }
+            if (shipment.DriverId != driverId) { return Forbid(); }
 
             var allowedStatuses = new[] { "Delivered", "Cancelled" };
-            if (!allowedStatuses.Contains(updateDto.NewStatus))
-            {
-                return BadRequest(new { message = "Invalid status update value." });
-            }
+            if (!allowedStatuses.Contains(updateDto.NewStatus)) { /*...*/ }
 
             try
             {
                 shipment.Status = updateDto.NewStatus;
+
+                if (updateDto.NewStatus == "Delivered")
+                {
+                    var notificationForCustomer = new Notification
+                    {
+                        UserId = shipment.CustomerId,
+                        Message = $"Your shipment (ID: {shipment.ShipmentId}) to {shipment.Destination} has been delivered!",
+                        CreatedAt = DateTime.UtcNow
+                    };
+                    _context.Notifications.Add(notificationForCustomer);
+                }
+
                 await _context.SaveChangesAsync();
                 return Ok(new { message = $"Shipment status updated to {updateDto.NewStatus}." });
             }

@@ -5,10 +5,10 @@ __turbopack_load_page_chunks__("/customer", [
   "static/chunks/node_modules_next_dist_7fdbac9b._.js",
   "static/chunks/node_modules_next_5cb05f67._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
-  "static/chunks/node_modules_@mui_system_esm_24f2bae4._.js",
-  "static/chunks/node_modules_@mui_material_esm_7e3e7783._.js",
-  "static/chunks/node_modules_6d3566c2._.js",
-  "static/chunks/[root-of-the-server]__3933f668._.js",
+  "static/chunks/node_modules_@mui_system_esm_92be7ca2._.js",
+  "static/chunks/node_modules_@mui_material_esm_4902ac91._.js",
+  "static/chunks/node_modules_3b63772b._.js",
+  "static/chunks/[root-of-the-server]__d4d2a786._.js",
   "static/chunks/pages_customer_index_tsx_2da965e7._.js",
-  "static/chunks/turbopack-pages_customer_index_tsx_8ad0ef1d._.js"
+  "static/chunks/turbopack-pages_customer_index_tsx_1899fec1._.js"
 ])

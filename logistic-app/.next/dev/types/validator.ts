@@ -62,6 +62,15 @@ type PagesPageConfig = {
   type __Unused = __Check
 }
 
+// Validate ../../../pages/admin/profile.tsx
+{
+  type __IsExpected<Specific extends PagesPageConfig> = Specific
+  const handler = {} as typeof import("../../../pages/admin/profile.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../pages/admin/vehicles.tsx
 {
   type __IsExpected<Specific extends PagesPageConfig> = Specific
@@ -107,6 +116,15 @@ type PagesPageConfig = {
   type __Unused = __Check
 }
 
+// Validate ../../../pages/customer/profile.tsx
+{
+  type __IsExpected<Specific extends PagesPageConfig> = Specific
+  const handler = {} as typeof import("../../../pages/customer/profile.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../pages/customer/shipments/[id].tsx
 {
   type __IsExpected<Specific extends PagesPageConfig> = Specific
@@ -120,6 +138,15 @@ type PagesPageConfig = {
 {
   type __IsExpected<Specific extends PagesPageConfig> = Specific
   const handler = {} as typeof import("../../../pages/driver/index.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../pages/driver/profile.tsx
+{
+  type __IsExpected<Specific extends PagesPageConfig> = Specific
+  const handler = {} as typeof import("../../../pages/driver/profile.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

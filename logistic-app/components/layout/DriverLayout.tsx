@@ -1,6 +1,8 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { useRouter } from 'next/router';
+import NotificationBell from './NotificationBell';
+import Link from 'next/link';
 
 const DriverLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
@@ -18,6 +20,13 @@ const DriverLayout = ({ children }: { children: React.ReactNode }) => {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Driver Dashboard
           </Typography>
+
+          <Link href="/driver/profile" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>My Profile</Button>
+          </Link>
+
+          <NotificationBell />
+          
           <Button color="inherit" onClick={handleLogout}>
             Logout
           </Button>

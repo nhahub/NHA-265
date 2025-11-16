@@ -32,7 +32,6 @@ namespace LogisticSys.Api.Controllers
 
             var shipmentExists = await _context.Shipments
                 .AnyAsync(s => s.ShipmentId == createDto.ShipmentId && s.DriverId == driverId);
-
             if (!shipmentExists)
             {
                 return Forbid("You do not have permission to update this shipment.");
@@ -60,7 +59,6 @@ namespace LogisticSys.Api.Controllers
             }
         }
 
-
         [HttpGet("{shipmentId}")]
         [Authorize(Roles = "Customer, Admin")]
         public async Task<IActionResult> GetTrackingHistory(int shipmentId)
@@ -70,12 +68,10 @@ namespace LogisticSys.Api.Controllers
             {
                 return Unauthorized();
             }
-
             var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
             var shipment = await _context.Shipments
                 .FirstOrDefaultAsync(s => s.ShipmentId == shipmentId);
-
             if (shipment == null)
             {
                 return NotFound("Shipment not found.");
@@ -86,7 +82,6 @@ namespace LogisticSys.Api.Controllers
                 return Forbid("You do not have permission to view this tracking history.");
             }
 
-
             var trackingHistory = await _context.Trackings
                 .Where(t => t.ShipmentId == shipmentId)
                 .OrderByDescending(t => t.Timestamp)
@@ -94,7 +89,9 @@ namespace LogisticSys.Api.Controllers
                 {
                     Location = t.Location,
                     Status = t.Status,
-                    Timestamp = t.Timestamp.ToString("yyyy-MM-dd HH:mm")
+                    Timestamp = t.Timestamp.ToString("yyyy-MM-dd HH:mm"),
+                    Latitude = t.Latitude,
+                    Longitude = t.Longitude
                 })
                 .ToListAsync();
 

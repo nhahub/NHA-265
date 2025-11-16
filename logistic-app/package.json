@@ -14,8 +14,10 @@
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
     "axios": "^1.13.1",
+    "leaflet": "^1.9.4",
     "next": "^16.0.1",
-    "react-hook-form": "^7.65.0"
+    "react-hook-form": "^7.65.0",
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "24.9.2",

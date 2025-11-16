@@ -5,5 +5,8 @@
         public string Location { get; set; } = string.Empty;
         public string Status { get; set; } = string.Empty;
         public string Timestamp { get; set; } = string.Empty;
+
+        public decimal? Latitude { get; set; }
+        public decimal? Longitude { get; set; }
     }
 }

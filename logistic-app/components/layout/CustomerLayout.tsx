@@ -2,12 +2,14 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import NotificationBell from './NotificationBell';
 
 const CustomerLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('userRole');
     router.push('/auth/login');
   };
 
@@ -21,6 +23,13 @@ const CustomerLayout = ({ children }: { children: React.ReactNode }) => {
           <Link href="/customer/new-shipment" passHref>
              <Button color="inherit" sx={{ mr: 1 }}>New Shipment</Button>
           </Link>
+
+          <Link href="/customer/profile" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>My Profile</Button>
+          </Link>
+
+          <NotificationBell />
+          
           <Button color="inherit" onClick={handleLogout}>
             Logout
           </Button>

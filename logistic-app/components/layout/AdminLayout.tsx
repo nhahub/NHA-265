@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import NotificationBell from './NotificationBell';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
@@ -33,7 +34,12 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
           <Link href="/admin/drivers" passHref>
              <Button color="inherit" sx={{ mr: 1 }}>Manage Drivers</Button>
           </Link>
-          
+
+          <NotificationBell />
+
+          <Link href="/admin/profile" passHref>
+             <Button color="inherit" sx={{ mr: 1 }}>My Profile</Button>
+          </Link>
 
           <Button color="inherit" onClick={handleLogout}>
             Logout

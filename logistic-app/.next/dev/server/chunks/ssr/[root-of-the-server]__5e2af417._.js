@@ -89,6 +89,7 @@ const CustomerLayout = ({ children })=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const handleLogout = ()=>{
         localStorage.removeItem('authToken');
+        localStorage.removeItem('userRole');
         router.push('/auth/login');
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -110,7 +111,7 @@ const CustomerLayout = ({ children })=>{
                             children: "Customer Dashboard"
                         }, void 0, false, {
                             fileName: "[project]/components/layout/CustomerLayout.tsx",
-                            lineNumber: 18,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -124,12 +125,12 @@ const CustomerLayout = ({ children })=>{
                                 children: "New Shipment"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/CustomerLayout.tsx",
-                                lineNumber: 22,
+                                lineNumber: 24,
                                 columnNumber: 14
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/components/layout/CustomerLayout.tsx",
-                            lineNumber: 21,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -138,18 +139,18 @@ const CustomerLayout = ({ children })=>{
                             children: "Logout"
                         }, void 0, false, {
                             fileName: "[project]/components/layout/CustomerLayout.tsx",
-                            lineNumber: 24,
+                            lineNumber: 26,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/layout/CustomerLayout.tsx",
-                    lineNumber: 17,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/layout/CustomerLayout.tsx",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -165,18 +166,18 @@ const CustomerLayout = ({ children })=>{
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/components/layout/CustomerLayout.tsx",
-                    lineNumber: 39,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/layout/CustomerLayout.tsx",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/layout/CustomerLayout.tsx",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

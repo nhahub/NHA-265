@@ -168,6 +168,106 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LogisticSys.Api.Controllers.NotificationsController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/Notifications/{id}/mark-as-read",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.NotificationsController",
+    "Method": "GetMyNotifications",
+    "RelativePath": "api/Notifications/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.PaymentsController",
+    "Method": "CreateOrUpdatePayment",
+    "RelativePath": "api/Payments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "LogisticSys.Api.Dtos.CreateOrUpdatePaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.PaymentsController",
+    "Method": "GetPaymentsForShipment",
+    "RelativePath": "api/Payments/{shipmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shipmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.ProfileController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Profile/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changeDto",
+        "Type": "LogisticSys.Api.Dtos.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.ProfileController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/Profile/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.ProfileController",
+    "Method": "UpdateMyProfile",
+    "RelativePath": "api/Profile/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "LogisticSys.Api.Dtos.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LogisticSys.Api.Controllers.RatingsController",
     "Method": "SubmitRating",
     "RelativePath": "api/Ratings",
