@@ -1,36 +1,89 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, Container, Stack, Divider } from '@mui/material';
 import { useRouter } from 'next/router';
-import NotificationBell from './NotificationBell';
 import Link from 'next/link';
+import NotificationBell from './NotificationBell';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 const DriverLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
-    localStorage.removeItem('userRole'); 
+    localStorage.removeItem('userRole');
     router.push('/auth/login');
   };
 
+  const navButtonStyle = {
+    color: 'white',
+    textTransform: 'none',
+    fontSize: '0.95rem',
+    fontWeight: 500,
+    padding: '6px 12px',
+    borderRadius: 2,
+    transition: '0.3s',
+    '&:hover': {
+      bgcolor: 'rgba(255, 193, 7, 0.15)', 
+      color: '#FFC107', 
+    },
+  };
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Driver Dashboard
-          </Typography>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <AppBar position="fixed" elevation={2} sx={{ bgcolor: '#1A1A1A', borderBottom: '1px solid #333' }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            
+            <Typography variant="h5" noWrap component="div" sx={{ fontWeight: 800, letterSpacing: 1 }}>
+              <Link href="/driver" style={{ textDecoration: 'none', color: 'white' }}>
+                Cargo<span style={{ color: '#FFC107' }}>Driver</span>
+              </Link>
+            </Typography>
 
-          <Link href="/driver/profile" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>My Profile</Button>
-          </Link>
+            <Stack direction="row" spacing={1} sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+              
+              <Link href="/driver" style={{ textDecoration: 'none' }}>
+                <Button startIcon={<AssignmentIcon />} sx={navButtonStyle}>
+                  My Jobs
+                </Button>
+              </Link>
 
-          <NotificationBell />
-          
-          <Button color="inherit" onClick={handleLogout}>
-            Logout
-          </Button>
-        </Toolbar>
+
+            </Stack>
+
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <NotificationBell />
+              
+              <Divider orientation="vertical" flexItem sx={{ bgcolor: '#444', mx: 1, height: 25, alignSelf: 'center' }} />
+
+              <Link href="/driver/profile" style={{ textDecoration: 'none' }}>
+                 <Button startIcon={<AccountCircleIcon />} sx={navButtonStyle}>
+                    Profile
+                 </Button>
+              </Link>
+
+              <Button 
+                onClick={handleLogout}
+                variant="outlined" 
+                color="error" 
+                size="small"
+                startIcon={<LogoutIcon />}
+                sx={{ 
+                    ml: 2, 
+                    borderColor: '#D32F2F', 
+                    color: '#FF8A80',
+                    '&:hover': { borderColor: '#FF5252', bgcolor: 'rgba(255, 82, 82, 0.1)', color: 'white' }
+                }}
+              >
+                Logout
+              </Button>
+            </Box>
+
+          </Toolbar>
+        </Container>
       </AppBar>
       
       <Box
@@ -39,11 +92,13 @@ const DriverLayout = ({ children }: { children: React.ReactNode }) => {
           flexGrow: 1,
           p: 3,
           width: '100%',
-          marginTop: '64px', 
+          marginTop: '64px',
+          bgcolor: '#F5F7FA',
+          minHeight: '100vh'
         }}
       >
         <Container maxWidth="lg">
-          {children} 
+          {children}
         </Container>
       </Box>
     </Box>

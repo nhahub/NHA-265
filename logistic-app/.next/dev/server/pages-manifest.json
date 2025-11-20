@@ -6,9 +6,13 @@
   "/admin/cities": "pages/admin/cities.js",
   "/admin/drivers": "pages/admin/drivers.js",
   "/admin/manage-shipments": "pages/admin/manage-shipments.js",
+  "/admin/profile": "pages/admin/profile.js",
   "/admin/vehicles": "pages/admin/vehicles.js",
   "/auth/login": "pages/auth/login.js",
+  "/auth/register": "pages/auth/register.js",
   "/customer": "pages/customer.js",
+  "/customer/new-shipment": "pages/customer/new-shipment.js",
   "/customer/shipments/[id]": "pages/customer/shipments/[id].js",
-  "/driver": "pages/driver.js"
+  "/driver": "pages/driver.js",
+  "/track": "pages/track.js"
 }

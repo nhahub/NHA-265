@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next';
-import { Typography, TextField, Button, Box, Grid, CircularProgress, Alert } from '@mui/material';
+import { Typography, TextField, Button, Box, Grid, CircularProgress, Alert, Paper, Container } from '@mui/material';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import AuthGuard from '../../components/auth/AuthGuard';
 import CustomerLayout from '../../components/layout/CustomerLayout';
 import { useRouter } from 'next/router';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 type CreateShipmentInputs = {
   origin: string;
@@ -13,7 +14,6 @@ type CreateShipmentInputs = {
   priority?: string;
   scheduledDate?: string;
 };
-
 const API_URL = 'https://localhost:7106';
 
 const NewShipmentPage: NextPage = () => {
@@ -24,154 +24,81 @@ const NewShipmentPage: NextPage = () => {
   const [success, setSuccess] = useState<string | null>(null);
 
   const onSubmit: SubmitHandler<CreateShipmentInputs> = async (data) => {
-    setLoading(true);
-    setError(null);
-    setSuccess(null);
-
+    setLoading(true); setError(null); setSuccess(null);
     try {
       const token = localStorage.getItem('authToken');
-      if (!token) {
-        router.push('/auth/login');
-        return;
+      if (!token) { router.push('/auth/login'); return; }
+      const headers = { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
+      const response = await fetch(`${API_URL}/api/shipments`, { method: 'POST', headers, body: JSON.stringify(data) });
+      if (!response.ok) { 
+          const err = await response.json(); 
+          throw new Error(err.message || 'Failed'); 
       }
-
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      };
-
-      const response = await fetch(`${API_URL}/api/shipments`, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        if (response.status === 401) {
-          localStorage.removeItem('authToken');
-          router.push('/auth/login');
-        }
-        const errorData = await response.json();
-        throw new Error(errorData.message || `Failed to create shipment: ${response.statusText}`);
-      }
-
       setSuccess('Shipment created successfully!');
-      setTimeout(() => {
-        router.push('/customer');
-      }, 2000);
-
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+      setTimeout(() => { router.push('/customer'); }, 2000);
+    } catch (err: any) { setError(err.message); } 
+    finally { setLoading(false); }
   };
 
   return (
-    <>
-      <Typography variant="h4" gutterBottom>
-        Create New Shipment
-      </Typography>
+    <Container maxWidth="md">
+      <Paper elevation={3} sx={{ p: 5, mt: 4, borderRadius: 3 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4 }}>
+          <Box sx={{ bgcolor: 'primary.light', p: 2, borderRadius: '50%', mb: 2 }}>
+             <LocalShippingIcon sx={{ fontSize: 40, color: 'primary.main' }} />
+          </Box>
+          <Typography variant="h4" fontWeight="bold" align="center">
+            New Order
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Fill in the details to create a new shipment request.
+          </Typography>
+        </Box>
 
-      <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate sx={{ mt: 1 }}>
-        <Grid container spacing={2}>
-          {/* Origin */}
-          {/* @ts-ignore */}
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              fullWidth
-              id="origin"
-              label="Origin Address"
-              {...register("origin", { required: "Origin is required" })}
-              error={!!errors.origin}
-              helperText={errors.origin?.message}
-            />
-          </Grid>
-
-          {/* Destination */}
-          {/* @ts-ignore */}
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              fullWidth
-              id="destination"
-              label="Destination Address"
-              {...register("destination", { required: "Destination is required" })}
-              error={!!errors.destination}
-              helperText={errors.destination?.message}
-            />
-          </Grid>
-
-          {/* Weight (Optional) */}
-          {/* @ts-ignore */}
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              id="weight"
-              label="Weight (kg)"
-              type="number"
-              InputProps={{ inputProps: { step: 0.1, min: 0 } }}
-              {...register("weight", { 
-                valueAsNumber: true,
-                min: { value: 0.1, message: "Weight must be positive" } 
-              })}
-              error={!!errors.weight}
-              helperText={errors.weight?.message}
-            />
-          </Grid>
-
-          {/* Scheduled Date (Optional) */}
-          {/* @ts-ignore */}
-          <Grid item xs={12} sm={6}>
-            <Controller
-                name="scheduledDate"
-                control={control}
+        <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
+          <Grid container spacing={3}>
+            {/* @ts-ignore */}
+            <Grid item xs={12} sm={6}>
+              <TextField required fullWidth label="Origin Address" placeholder="e.g. Cairo, Nasr City" variant="outlined"
+                {...register("origin", { required: "Required" })} error={!!errors.origin} helperText={errors.origin?.message}
+              />
+            </Grid>
+            {/* @ts-ignore */}
+            <Grid item xs={12} sm={6}>
+              <TextField required fullWidth label="Destination Address" placeholder="e.g. Alex, Smouha" variant="outlined"
+                {...register("destination", { required: "Required" })} error={!!errors.destination} helperText={errors.destination?.message}
+              />
+            </Grid>
+            {/* @ts-ignore */}
+            <Grid item xs={12} sm={6}>
+               <TextField fullWidth label="Weight (kg)" type="number" InputProps={{ inputProps: { step: 0.1, min: 0 } }}
+                {...register("weight", { valueAsNumber: true })}
+               />
+            </Grid>
+            {/* @ts-ignore */}
+            <Grid item xs={12} sm={6}>
+               <Controller name="scheduledDate" control={control}
                 render={({ field }) => (
-                    <TextField
-                        {...field}
-                        fullWidth
-                        id="scheduledDate"
-                        label="Scheduled Date (Optional)"
-                        type="date"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                    />
+                    <TextField {...field} fullWidth label="Scheduled Date" type="date" InputLabelProps={{ shrink: true }} />
                 )}
-            />
+               />
+            </Grid>
           </Grid>
-          
-          {/* (ممكن نضيف حقول تانية زي Priority و Scheduled Time بنفس الطريقة) */}
 
-        </Grid>
+          {error && <Alert severity="error" sx={{ mt: 3 }}>{error}</Alert>}
+          {success && <Alert severity="success" sx={{ mt: 3 }}>{success}</Alert>}
 
-        {/* (5) عرض رسائل النجاح أو الفشل) */}
-        {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
-        {success && <Alert severity="success" sx={{ mt: 2 }}>{success}</Alert>}
-
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          sx={{ mt: 3, mb: 2 }}
-          disabled={loading}
-        >
-          {loading ? <CircularProgress size={24} /> : 'Create Shipment'}
-        </Button>
-      </Box>
-    </>
+          <Button type="submit" fullWidth variant="contained" size="large" sx={{ mt: 4, py: 1.5, fontWeight: 'bold', fontSize: '1.1rem' }} disabled={loading}>
+            {loading ? <CircularProgress size={26} /> : 'Create Shipment'}
+          </Button>
+        </Box>
+      </Paper>
+    </Container>
   );
 };
 
 const ProtectedNewShipmentPage: NextPage = () => {
-  return (
-    <AuthGuard>
-      <CustomerLayout>
-        <NewShipmentPage />
-      </CustomerLayout>
-    </AuthGuard>
-  );
+  return ( <AuthGuard> <CustomerLayout> <NewShipmentPage /> </CustomerLayout> </AuthGuard> );
 };
 
 export default ProtectedNewShipmentPage;

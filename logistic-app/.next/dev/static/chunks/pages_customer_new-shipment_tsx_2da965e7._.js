@@ -8,8 +8,8 @@
   "static/chunks/node_modules_next_5cb05f67._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
   "static/chunks/node_modules_@mui_system_esm_89381e5e._.js",
-  "static/chunks/node_modules_@mui_material_esm_df456c5d._.js",
-  "static/chunks/node_modules_33fedfa0._.js",
+  "static/chunks/node_modules_@mui_material_esm_7e499c4e._.js",
+  "static/chunks/node_modules_74f733ea._.js",
   "static/chunks/[root-of-the-server]__dd24f95c._.js"
 ],
     source: "entry"

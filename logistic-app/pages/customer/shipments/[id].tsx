@@ -14,12 +14,13 @@ import {
   Grid,
   Rating,
   TextField,
-  Button 
+  Button,
+  Chip
 } from '@mui/material';
 import AuthGuard from '../../../components/auth/AuthGuard';
 import CustomerLayout from '../../../components/layout/CustomerLayout';
-
 import dynamic from 'next/dynamic';
+
 const MapComponent = dynamic(
   () => import('../../../components/layout/MapComponent'), 
   { ssr: false }
@@ -72,30 +73,18 @@ const ShipmentRating = ({ shipmentId, onRatingSuccess }: { shipmentId: number, o
     setError(null);
     try {
       const token = localStorage.getItem('authToken');
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      };
+      const headers = { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
       const response = await fetch(`${API_URL}/api/ratings`, {
         method: 'POST',
         headers: headers,
-        body: JSON.stringify({
-          shipmentId: shipmentId,
-          ratingValue: ratingValue,
-          comments: comments
-        })
+        body: JSON.stringify({ shipmentId, ratingValue, comments })
       });
       const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.message || 'Failed to submit rating.');
-      }
+      if (!response.ok) { throw new Error(result.message || 'Failed to submit rating.'); }
       alert("Thank you for your feedback!");
       onRatingSuccess();
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    } catch (err: any) { setError(err.message); } 
+    finally { setLoading(false); }
   };
 
   return (
@@ -118,12 +107,7 @@ const ShipmentRating = ({ shipmentId, onRatingSuccess }: { shipmentId: number, o
           onChange={(e) => setComments(e.target.value)}
         />
         {error && <Alert severity="error" sx={{ my: 1 }}>{error}</Alert>}
-        <Button
-          variant="contained"
-          sx={{ mt: 2 }}
-          onClick={handleSubmitRating}
-          disabled={loading}
-        >
+        <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmitRating} disabled={loading}>
           {loading ? <CircularProgress size={24} /> : "Submit Rating"}
         </Button>
       </Box>
@@ -143,38 +127,66 @@ const ShipmentDetailsPage: NextPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hasRated, setHasRated] = useState(false); 
+  const [payLoading, setPayLoading] = useState(false);
+
+  const fetchDetails = async () => {
+    try {
+      const token = localStorage.getItem('authToken');
+      if (!token) { router.push('/auth/login'); return; }
+      const headers = { 'Authorization': `Bearer ${token}` };
+
+      const [shipmentRes, trackingRes, paymentRes] = await Promise.all([
+        fetch(`${API_URL}/api/shipments/${id}`, { headers }),
+        fetch(`${API_URL}/api/tracking/${id}`, { headers }),
+        fetch(`${API_URL}/api/payments/${id}`, { headers })
+      ]);
+
+      if (!shipmentRes.ok) { 
+        if (shipmentRes.status === 401) router.push('/auth/login');
+        throw new Error('Failed to fetch shipment details'); 
+      }
+
+      setShipment(await shipmentRes.json());
+      if (trackingRes.ok) setTrackingHistory(await trackingRes.json());
+      if (paymentRes.ok) setPaymentHistory(await paymentRes.json());
+
+    } catch (err: any) { setError(err.message); } 
+    finally { setLoading(false); }
+  };
 
   useEffect(() => {
-    if (!id) return; 
-
-    const fetchDetails = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const token = localStorage.getItem('authToken');
-        if (!token) { router.push('/auth/login'); return; }
-        const headers = { 'Authorization': `Bearer ${token}` };
-
-        const [shipmentRes, trackingRes, paymentRes] = await Promise.all([
-          fetch(`${API_URL}/api/shipments/${id}`, { headers }),
-          fetch(`${API_URL}/api/tracking/${id}`, { headers }),
-          fetch(`${API_URL}/api/payments/${id}`, { headers })
-        ]);
-
-        if (!shipmentRes.ok) { throw new Error('Failed to fetch shipment details'); }
-        
-        if (!trackingRes.ok) { console.error("Failed to fetch tracking history"); }
-        if (!paymentRes.ok) { console.error("Failed to fetch payment history"); }
-
-        setShipment(await shipmentRes.json());
-        if (trackingRes.ok) { setTrackingHistory(await trackingRes.json()); }
-        if (paymentRes.ok) { setPaymentHistory(await paymentRes.json()); }
-
-      } catch (err: any) { setError(err.message); } 
-      finally { setLoading(false); }
-    };
-    fetchDetails();
+    if (id) fetchDetails();
   }, [id, router]); 
+
+
+  const handlePayNow = async (paymentId: number) => {
+    if (!confirm("Confirm payment? (This is a simulation)")) return;
+
+    setPayLoading(true);
+    try {
+      const token = localStorage.getItem('authToken');
+      const headers = { 'Authorization': `Bearer ${token}` };
+
+      const response = await fetch(`${API_URL}/api/payments/pay/${paymentId}`, {
+        method: 'POST',
+        headers: headers
+      });
+
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.message || 'Payment failed');
+      }
+
+      alert('Payment Successful!');
+      fetchDetails();
+
+    } catch (err: any) {
+      alert(err.message);
+    } finally {
+      setPayLoading(false);
+    }
+  };
+
 
   if (loading) return <CircularProgress />;
   if (error) return <Alert severity="error">{error}</Alert>;
@@ -195,9 +207,7 @@ const ShipmentDetailsPage: NextPage = () => {
         {/* @ts-ignore */}
         <Grid item xs={12} md={5}>
           <Paper sx={{ p: 3, mb: 2 }}>
-            <Typography variant="h4" gutterBottom>
-              Shipment Details #{shipment.shipmentId}
-            </Typography>
+            <Typography variant="h5" gutterBottom>Shipment Details #{shipment.shipmentId}</Typography>
             <List>
               <ListItem><ListItemText primary="Status" secondary={shipment.status} /></ListItem>
               <Divider />
@@ -212,17 +222,37 @@ const ShipmentDetailsPage: NextPage = () => {
           </Paper>
 
           <Paper sx={{ p: 3, mb: 2 }}>
-            <Typography variant="h5" gutterBottom>
-              Payment Status
-            </Typography>
+            <Typography variant="h5" gutterBottom>Payment Status</Typography>
             <List>
               {paymentHistory.length > 0 ? (
                 paymentHistory.map((payment) => (
-                  <ListItem key={payment.paymentId}>
-                    <ListItemText 
-                      primary={`EGP ${payment.amount}`} 
-                      secondary={`${payment.paymentStatus} via ${payment.paymentMethod} (${payment.paymentDate})`} 
-                    />
+                  <ListItem key={payment.paymentId} sx={{ display: 'block' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <ListItemText 
+                        primary={`EGP ${payment.amount}`} 
+                        secondary={payment.paymentDate} 
+                      />
+                      
+                      <Chip 
+                        label={payment.paymentStatus} 
+                        color={payment.paymentStatus === 'Completed' ? 'success' : 'warning'} 
+                        size="small" 
+                      />
+                    </Box>
+
+                    {payment.paymentStatus === 'Pending' && (
+                      <Button 
+                        variant="contained" 
+                        color="primary" 
+                        size="small" 
+                        fullWidth
+                        sx={{ mt: 2 }}
+                        onClick={() => handlePayNow(payment.paymentId)}
+                        disabled={payLoading}
+                      >
+                        {payLoading ? 'Processing...' : 'Pay Now (Online)'}
+                      </Button>
+                    )}
                   </ListItem>
                 ))
               ) : (
@@ -242,11 +272,7 @@ const ShipmentDetailsPage: NextPage = () => {
               onRatingSuccess={() => setHasRated(true)} 
             />
           )}
-          {hasRated && (
-             <Alert severity="success" sx={{ mt: 3 }}>
-               Thank you for rating this shipment!
-             </Alert>
-          )}
+          {hasRated && <Alert severity="success" sx={{ mt: 3 }}>Rated successfully!</Alert>}
         </Grid>
         
         {/* @ts-ignore */}
@@ -256,9 +282,7 @@ const ShipmentDetailsPage: NextPage = () => {
           </Paper>
           
           <Paper sx={{ p: 3 }}>
-            <Typography variant="h4" gutterBottom>
-              Tracking History
-            </Typography>
+            <Typography variant="h4" gutterBottom>Tracking History</Typography>
             <List>
               {trackingHistory.length > 0 ? (
                 trackingHistory.map((entry, index) => (

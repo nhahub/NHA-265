@@ -1,49 +1,526 @@
-[00:00:16.187] Server  LOG      ✓ Ready in 11.5s
-[00:00:35.085] Server  LOG      ○ Compiling / ...
-[00:00:54.098] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:00:12.515] Server  LOG      ✓ Ready in 9.1s
+[00:00:15.544] Server  LOG      ○ Compiling / ...
+[00:00:58.290] Server  LOG      ○ Compiling /auth/login ...
+[00:00:59.237] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:01:37.960] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:01:06.507] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:01:37.960] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:04:06.367] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:07:55.573] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:04:06.367] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:12:07.852] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:04:06.367] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:19:13.413] Server  LOG      ✓ Compiled in 1018ms
-[00:19:14.164] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:05:12.813] Server  LOG      ✓ Compiled in 132ms
+[00:07:03.025] Server  LOG      ✓ Compiled in 420ms
+[00:09:26.679] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:19:14.165] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:10:07.377] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:19:14.165] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:10:07.377] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:24:33.506] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:10:23.044] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
+[00:10:43.281] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:24:39.385] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:19:52.135] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-[00:24:39.385] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:20:01.966] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:24:39.385] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:20:01.966] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:26:01.327] Server  LOG      ✓ Compiled in 968ms
-[00:26:02.157] Browser ERROR   ./pages/admin/index.tsx:154:3
-Ecmascript file had an error
-  152 |     }));
-  153 |   };
-> 154 |   handleAssignmentChange = handleAssignmentChangeInternal;
-      |   ^^^^^^^^^^^^^^^^^^^^^^
-  155 |
-  156 |
-  157 |   // --- (عرض الواجهة) ---
+[00:20:05.384] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
-cannot reassign to a variable declared with `const`
-[00:26:36.386] Server  LOG      ✓ Compiled in 204ms
-[00:27:36.629] Server  LOG      ✓ Compiled in 493ms
-[00:30:07.068] Server  LOG      ○ Compiling /customer/shipments/[id] ...
-[00:37:45.092] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:20:05.384] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:51:26.554] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+[00:20:05.384] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
 
-[00:59:46.304] Server  LOG      ○ Compiling /driver ...
-[00:59:57.569] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+[00:27:40.044] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
 
+[00:27:49.578] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:27:49.578] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:30:44.184] Server  LOG      ✓ Compiled in 459ms
+[00:34:08.902] Server  LOG      ✓ Compiled in 879ms
+[00:35:01.853] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:39:16.533] Server  LOG      ✓ Compiled in 123ms
+[00:39:38.475] Server  LOG      ✓ Compiled in 14ms
+[00:40:24.411] Server  LOG      ✓ Compiled in 10ms
+[00:42:20.893] Server  LOG      ✓ Compiled in 424ms
+[00:43:04.045] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:43:20.940] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:43:20.940] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:43:20.940] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:44:17.749] Browser LOG     No token found, redirecting to login...
+[00:47:20.820] Server  LOG      ✓ Compiled in 664ms
+[00:48:05.060] Server  LOG      ✓ Compiled in 1616ms
+[00:51:15.243] Server  LOG      ✓ Compiled in 7ms
+[00:51:41.702] Server  LOG      ✓ Compiled in 2.2s
+[00:51:42.200] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:51:42.200] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:51:42.200] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:52:34.668] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:54:16.178] Server  LOG      ✓ Compiled in 407ms
+[00:54:43.788] Server  LOG      ✓ Compiled in 115ms
+[00:57:20.396] Server  LOG      ✓ Compiled in 796ms
+[00:59:21.849] Server  LOG      ✓ Compiled in 414ms
+[01:02:30.956] Server  LOG      ✓ Compiled in 654ms
+[01:02:34.477] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:02:34.477] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:02:39.037] Server  WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:02:39.038] Server  WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:02:39.038] Server  WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:02:39.717] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:02:39.717] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:02:39.717] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:02:41.008] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:02:41.008] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:03:44.482] Server  LOG      ✓ Compiled in 640ms
+[01:04:26.612] Server  LOG      ✓ Compiled in 192ms
+[01:04:30.867] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:06:55.762] Server  LOG      ✓ Compiled in 388ms
+[01:11:16.119] Server  LOG      ✓ Compiled in 425ms
+[01:13:13.193] Browser LOG     No token found, redirecting to login...
+[01:13:14.591] Server  WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:13:15.301] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:13:15.301] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:13:15.301] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:13:15.301] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+[01:13:18.301] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:13:18.301] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:13:18.301] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:14:16.260] Server  LOG      ✓ Compiled in 488ms
+[01:14:17.489] Server  LOG      ✓ Compiled in 20ms
+[01:14:19.188] Server  LOG      ✓ Compiled in 30ms
+[01:14:46.013] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:14:46.013] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:14:50.461] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:17:33.779] Server  LOG      ✓ Compiled in 932ms
+[01:17:40.376] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:17:40.376] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:17:40.376] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:17:40.376] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:18:26.300] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:18:26.300] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:18:31.568] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:18:31.568] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:18:31.568] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:18:36.741] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:18:36.741] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:20:20.151] Server  LOG      ✓ Compiled in 350ms
+[01:22:41.907] Server  LOG      ✓ Compiled in 307ms
+[01:23:29.058] Server  LOG      ✓ Compiled in 403ms
+[01:23:29.192] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:23:38.684] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:23:38.684] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:23:38.684] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:24:52.002] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <MuiContainer-root as="main" ownerState={{...}} className="MuiContain..." ref={null}>
+      <Insertion>
+      <main className="MuiContain...">
+        <Paper elevation={6} sx={{p:4,display:"flex", ...}}>
+          <MuiPaper-root as="div" ownerState={{elevation:6, ...}} className="MuiPaper-r..." ref={null} ...>
+            <Insertion>
+            <div className="MuiPaper-r..." style={{...}}>
+              <Avatar>
+              <Typography>
+              <Typography>
+              <Box component="form" onSubmit={function} noValidate={true} sx={{mt:1,width:"100%"}}>
+                <Styled(div) as="form" ref={null} className="MuiBox-root" theme={{...}} onSubmit={function} ...>
+                  <Insertion>
+                  <form className="MuiBox-roo..." onSubmit={function} noValidate={true}>
+                    <TextField>
+                    <TextField>
+                    <Button>
+                    <Grid container={true} justifyContent="flex-end">
+                      <MuiGrid-root ref={null} as="div" ownerState={{container:true, ...}} className="MuiGrid-ro..." ...>
+                        <Insertion>
+                        <div className="MuiGrid-ro...">
+                          <Grid item={true}>
+                            <MuiGrid-root ref={null} as="div" ownerState={{...}} className="MuiGrid-ro..." sx={{}}>
+                              <Insertion>
+                              <div className="MuiGrid-ro...">
+                                <LinkComponent href="/auth/regi..." passHref={true}>
+>                                 <a
+>                                   ref={function}
+>                                   onClick={function onClick}
+>                                   onMouseEnter={function onMouseEnter}
+>                                   onTouchStart={function onTouchStart}
+>                                   href="/auth/register"
+>                                 >
+                                    <Link variant="body2" sx={{...}}>
+                                      <MuiLink-root color="primary" className="MuiLink-ro..." classes={undefined} ...>
+                                        <Insertion>
+                                        <Typography color="primary" className="MuiLink-ro..." component="a" ...>
+                                          <MuiTypography-root as="a" ref={null} className="MuiTypogra..." ...>
+                                            <Insertion>
+>                                           <a
+>                                             className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-u..."
+>                                             onBlur={function handleBlur}
+>                                             onFocus={function handleFocus}
+>                                             style={{}}
+>                                           >
+
+[01:24:52.002] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>
+[01:24:56.444] Browser WARN    MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:26:45.368] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:26:45.368] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:26:45.368] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:34:00.843] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[01:34:00.843] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:34:00.843] Browser WARN    MUI Grid: The `md` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[01:35:00.973] Server  LOG      ✓ Compiled in 190ms

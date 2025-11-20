@@ -1,8 +1,15 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, Container, Stack, Divider } from '@mui/material';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NotificationBell from './NotificationBell';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import InventoryIcon from '@mui/icons-material/Inventory';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
@@ -13,54 +20,104 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
     router.push('/auth/login');
   };
 
+  const navButtonStyle = {
+    color: 'white',
+    textTransform: 'none',
+    fontSize: '0.95rem',
+    fontWeight: 500,
+    padding: '6px 12px',
+    borderRadius: 2,
+    transition: '0.3s',
+    '&:hover': {
+      bgcolor: 'rgba(255, 193, 7, 0.15)',
+      color: '#FFC107',
+    },
+  };
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            <Link href="/admin" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-                Admin Dashboard
-            </Link>
-          </Typography>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <AppBar position="fixed" elevation={2} sx={{ bgcolor: '#1A1A1A', borderBottom: '1px solid #333' }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            
+            <Typography variant="h5" noWrap component="div" sx={{ fontWeight: 800, letterSpacing: 1 }}>
+              <Link href="/admin" style={{ textDecoration: 'none', color: 'white' }}>
+                Cargo<span style={{ color: '#FFC107' }}>Admin</span>
+              </Link>
+            </Typography>
 
-          <Link href="/admin/manage-shipments" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>Manage Shipments</Button>
-          </Link>
+            <Stack direction="row" spacing={1} sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+              
+              <Link href="/admin/manage-shipments" style={{ textDecoration: 'none' }}>
+                <Button startIcon={<InventoryIcon />} sx={navButtonStyle}>
+                  Shipments
+                </Button>
+              </Link>
 
-          <Link href="/admin/cities" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>Manage Cities</Button>
-          </Link>
+              <Link href="/admin/drivers" style={{ textDecoration: 'none' }}>
+                <Button startIcon={<PeopleAltIcon />} sx={navButtonStyle}>
+                  Drivers
+                </Button>
+              </Link>
 
-          <Link href="/admin/vehicles" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>Manage Vehicles</Button>
-          </Link>
+              <Link href="/admin/vehicles" style={{ textDecoration: 'none' }}>
+                <Button startIcon={<LocalShippingIcon />} sx={navButtonStyle}>
+                  Vehicles
+                </Button>
+              </Link>
 
-          <Link href="/admin/drivers" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>Manage Drivers</Button>
-          </Link>
+              <Link href="/admin/cities" style={{ textDecoration: 'none' }}>
+                <Button startIcon={<LocationCityIcon />} sx={navButtonStyle}>
+                  Cities
+                </Button>
+              </Link>
 
-          <NotificationBell />
+            </Stack>
 
-          <Link href="/admin/profile" passHref>
-             <Button color="inherit" sx={{ mr: 1 }}>My Profile</Button>
-          </Link>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <NotificationBell />
+              
+              <Divider orientation="vertical" flexItem sx={{ bgcolor: '#444', mx: 1, height: 25, alignSelf: 'center' }} />
 
-          <Button color="inherit" onClick={handleLogout}>
-            Logout
-          </Button>
-        </Toolbar>
+              <Link href="/admin/profile" style={{ textDecoration: 'none' }}>
+                 <Button startIcon={<AccountCircleIcon />} sx={navButtonStyle}>
+                    Profile
+                 </Button>
+              </Link>
+
+              <Button 
+                onClick={handleLogout}
+                variant="outlined" 
+                color="error" 
+                size="small"
+                startIcon={<LogoutIcon />}
+                sx={{ 
+                    ml: 2, 
+                    borderColor: '#D32F2F', 
+                    color: '#FF8A80',
+                    '&:hover': { borderColor: '#FF5252', bgcolor: 'rgba(255, 82, 82, 0.1)', color: 'white' }
+                }}
+              >
+                Logout
+              </Button>
+            </Box>
+
+          </Toolbar>
+        </Container>
       </AppBar>
       
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          p: 3,
+          p: 4,
           width: '100%',
           marginTop: '64px',
+          bgcolor: '#F5F7FA',
+          minHeight: '100vh'
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           {children}
         </Container>
       </Box>
