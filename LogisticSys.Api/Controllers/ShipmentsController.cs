@@ -36,7 +36,10 @@ namespace LogisticSys.Api.Controllers
                     Origin = s.Origin,
                     Destination = s.Destination,
                     Status = s.Status,
-                    ScheduledDate = s.ScheduledDate.HasValue ? s.ScheduledDate.Value.ToString("yyyy-MM-dd") : null
+                    ScheduledDate = s.ScheduledDate.HasValue ? s.ScheduledDate.Value.ToString("yyyy-MM-dd") : null,
+                    PaymentStatus = s.Payments.Any()
+                        ? s.Payments.OrderByDescending(p => p.PaymentDate).First().PaymentStatus
+                        : "Unpaid"
                 })
                 .ToListAsync();
 

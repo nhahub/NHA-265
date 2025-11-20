@@ -26,18 +26,35 @@ namespace LogisticSys.Api.Controllers
         public async Task<IActionResult> GetPaymentsForShipment(int shipmentId)
         {
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!int.TryParse(userIdString, out int currentUserId)) { /*...*/ }
+            if (!int.TryParse(userIdString, out int currentUserId))
+            {
+                return Unauthorized();
+            }
             var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
             var shipment = await _context.Shipments.FirstOrDefaultAsync(s => s.ShipmentId == shipmentId);
-            if (shipment == null) { /*...*/ }
 
-            if (userRole == "Customer" && shipment.CustomerId != currentUserId) { /*...*/ }
+            if (shipment == null)
+            {
+                return NotFound("Shipment not found.");
+            }
+
+            if (userRole == "Customer" && shipment.CustomerId != currentUserId)
+            {
+                return Forbid("You do not have permission to view these payments.");
+            }
 
             var payments = await _context.Payments
                 .Where(p => p.ShipmentId == shipmentId)
                 .OrderByDescending(p => p.PaymentDate)
-                .Select(p => new PaymentDto { /* ... */ })
+                .Select(p => new PaymentDto
+                {
+                    PaymentId = p.PaymentId,
+                    Amount = p.Amount,
+                    PaymentMethod = p.PaymentMethod ?? "N/A",
+                    PaymentStatus = p.PaymentStatus,
+                    PaymentDate = p.PaymentDate.ToString("yyyy-MM-dd HH:mm")
+                })
                 .ToListAsync();
 
             return Ok(payments);
@@ -84,6 +101,50 @@ namespace LogisticSys.Api.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Error updating payment.", error = ex.Message });
+            }
+        }
+
+        [HttpPost("pay/{paymentId}")]
+        [Authorize(Roles = "Customer")]
+        public async Task<IActionResult> PayForShipment(int paymentId)
+        {
+            var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (!int.TryParse(userIdString, out int customerId))
+            {
+                return Unauthorized();
+            }
+
+            var payment = await _context.Payments
+                .Include(p => p.Shipment)
+                .FirstOrDefaultAsync(p => p.PaymentId == paymentId);
+
+            if (payment == null)
+            {
+                return NotFound(new { message = "Payment request not found." });
+            }
+
+            if (payment.Shipment.CustomerId != customerId)
+            {
+                return Forbid("You can only pay for your own shipments.");
+            }
+
+            if (payment.PaymentStatus == "Completed")
+            {
+                return Conflict(new { message = "This payment is already completed." });
+            }
+
+            try
+            {
+                payment.PaymentStatus = "Completed";
+                payment.PaymentMethod = "Online";
+                payment.PaymentDate = DateTime.UtcNow;
+
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Payment successful!" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error processing payment.", error = ex.Message });
             }
         }
     }

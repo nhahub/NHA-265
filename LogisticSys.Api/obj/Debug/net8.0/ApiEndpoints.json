@@ -236,6 +236,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LogisticSys.Api.Controllers.PaymentsController",
+    "Method": "PayForShipment",
+    "RelativePath": "api/Payments/pay/{paymentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LogisticSys.Api.Controllers.ProfileController",
     "Method": "ChangePassword",
     "RelativePath": "api/Profile/change-password",
@@ -272,6 +288,22 @@
       {
         "Name": "updateDto",
         "Type": "LogisticSys.Api.Dtos.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticSys.Api.Controllers.PublicController",
+    "Method": "TrackShipment",
+    "RelativePath": "api/Public/track/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
